@@ -30,3 +30,12 @@ export default function Dashboard() {
     </div>
   )
 }
+<button
+  onClick={async () => {
+    await supabase.auth.signOut()
+    router.push('/login')
+  }}
+  className="mt-4 bg-gray-600 text-white px-4 py-2"
+>
+  登出
+</button>
